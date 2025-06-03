@@ -5,9 +5,7 @@ import { is_logged_in } from '../middleware/auth.middleware.js'
 const router = express.Router()
 
 router.post('/signup', signup)
-
 router.post('/login', login)
-
 router.post('/logout', logout)
 
 router.put('/update-profile', is_logged_in, update_profile)
