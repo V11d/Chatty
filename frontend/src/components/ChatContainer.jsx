@@ -8,7 +8,7 @@ import { format_message_time } from '../lib/utils'
 
 const ChatContainer = () => {
   const {
-    messages, get_messages, is_messages_loading, selected_user, subscribe_to_messages, unsubscribe_from_messages} = use_chat_store()
+    messages, get_messages, is_messages_loading, selected_user, subscribe_to_messages, unsubscribe_from_messages } = use_chat_store()
   const { auth_user } = use_auth_store()
   const message_end_ref = useRef(null)
 
@@ -35,7 +35,7 @@ const ChatContainer = () => {
   }
 
   return (
-    <div className="flex-1 flex flex-col overflow-auto">
+    <div className="flex-1 flex flex-col max-h-[800px] overflow-auto ">
       <ChatHeader />
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
